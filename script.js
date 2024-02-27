@@ -25,7 +25,7 @@ loginButton.addEventListener("click", () => {
 
 // Add another event listener to open the "buddhi.html" page
 document.getElementById("login-button").addEventListener("click", () => {
-    window.open("buddhi.html");
+   window.location.href = 'buddhi.html';
 });
 
         
