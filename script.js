@@ -15,19 +15,21 @@ numberButtons.forEach((button) => {
 // Default PIN
 const defaultPin = "1234";
 
-// Add event listener to the login button
-loginButton.addEventListener("click", () => { 
-    
+// Add an event listener to the login button
+loginButton.addEventListener("click", () => {
     if (pinInput.value === defaultPin) {
-        // Hide the login screen and the number buttons
-        if (pinInput.value === defaultPin) {
-            document.getElementById("login-button").click();
-        }
-        document.getElementById("login-button").addEventListener("click", function() {
-            window.open("buddhi.html", "_blank");
-                });
+        // If the entered pin matches the default pin, trigger the login action
+        document.getElementById("login-button").click();
+    }
+});
+
+// Add another event listener to open the "buddhi.html" page
+document.getElementById("login-button").addEventListener("click", () => {
+    window.open("buddhi.html");
+});
+
         
-    } else {
+  else {
         alert("Incorrect PIN. Please try again.");
         // Clear the pinInput when PIN is incorrect
         pinInput.value = "";
