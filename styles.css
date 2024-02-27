@@ -1,0 +1,98 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background:  black;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-43%, -47%);
+    width: 20vw;
+    height: 30vh;
+    background: rgba(29, 88, 252, 0);
+    border: 1px solid #02bbff;
+    padding-top: 12%;
+}
+  
+
+
+
+#pin-input {
+  
+    left:-50px;
+    top: 20px;
+    position: absolute;
+    background-color: transparent;
+    width: 59%;
+    height: 20px;
+    padding: 10px;
+    margin: 1px 2px 3% 35%;
+    border: 1px solid rgba(8, 234, 255, 0);
+    border-radius: 4px;
+    color: cyan;
+    text-align: center;
+}
+#button-container {
+    position: absolute;
+    top:19%;
+    left: -15%;
+    padding-top: 10%;
+    padding-right: 15%;
+    padding-bottom: 6%;
+    padding-left: 7%;
+    margin-top: -2%;
+    margin-bottom: 6%;
+    margin-right: 14%;
+    margin-left: 10%;
+    z-index: 1;
+    background: #7c7f7f00;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+    justify-items: end;
+    align-items: baseline;
+    align-content: stretch;
+
+}
+.number-button{
+    position: -webkit-sticky;
+  position: sticky;
+  background-color: #f5f5f503;
+    padding: 24px 21px;
+    border: 1px solid #02bcff00;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 1px;
+    width: 77px;
+    text-align: center;
+    text-decoration-color: #ff0a0a;
+    color:cyan;
+  }
+#login-button {
+    position: absolute;
+    left: 21%;
+    top: 87%;
+    background-color: #f5f5f503;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 50px;
+    border: 1px solid #02bcff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+#login-button:hover {
+  background-color: #00ffff;
+}
+
+
+
