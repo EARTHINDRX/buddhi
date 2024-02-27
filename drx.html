@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer App</title>
+    <style>
+        /* Add some basic styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .image-viewer {
+            opacity: 1;
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            justify-content: space-between;
+            width: 160px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            backdrop-filter: blur(5px);
+            padding: 5px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .navigation.visible {
+            opacity: 1;
+        }
+
+        .navigation button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.2rem;
+            color: #666;
+            outline: none;
+        }
+        .login-button{
+            background-color: #333;
+            border:#f0f0f0;
+            margin-top: 0cap;
+
+        }
+        .button{
+            text-align:center;
+
+        }
+
+        .navigation button:hover,
+        .navigation button:focus {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-viewer" onclick="toggleNavigation()">
+        <div class="image-container">
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="navigation" id="navigation">
+            <button onclick="previousImage()">&#8592; Previous</button>
+            <button onclick="nextImage()">Next &#8594;</button>
+            <button id="login-button">Login</button>
+        </div>
+    </div>
+
+    <script>
+
+
+       document.getElementById("login-button").addEventListener("click", function() {
+         window.open("index.html", "_blank");
+             });
+  
+        // Add your image files in the same directory as the HTML file
+        const images = [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg",
+            "image4.jpg"
+        ];
+
+        let currentImage = 0;
+
+        function showImage(imageIndex) {
+            const imageContainer = document.querySelector(".image-container img");
+            imageContainer.src = images[imageIndex];
+            currentImage = imageIndex;
+        }
+
+        function previousImage() {
+            currentImage = (currentImage + images.length - 1) % images.length;
+            showImage(currentImage);
+        }
+
+        function nextImage() {
+            currentImage = (currentImage + 1) % images.length;
+            showImage(currentImage);
+        }
+
+        function toggleNavigation() {
+            const navigation = document.getElementById("navigation");
+            navigation.classList.toggle("visible");
+        }
+
+        showImage(currentImage);
+    </script>
+</body>
+</html>
