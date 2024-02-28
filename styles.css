@@ -1,0 +1,99 @@
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
+body {
+	background: rgb(0, 0, 0);		
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+.screen {		
+	background: rgba(0, 0, 0, 0.012);
+	height: 324px;
+	width: 298px;	
+	box-shadow: 0px 0px 24px #02bcff;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+}
+#button-container{
+ 
+  position:relative;
+  top:33px;
+  left: 19px;
+  height:171px;
+  width:298px;
+    background: #7c7f7f00;
+   
+    background-color: #f5f5f503;  
+  
+  }
+  .number-button{
+      
+    background-color: #f5f5f503;
+      padding: 24px 21px;
+      border: 1px solid #02bcff00;
+      border-radius: 3px;
+      cursor: pointer;
+      margin: 1px;
+      width: 77px;
+      text-align: center;
+      text-decoration-color: #ff0a0a;
+      color:cyan;
+    }
+    .number-button {
+      border: 1px solid #02bcff;
+      opacity: 1;
+      box-shadow: 0 0 0 rgba(2, 187, 255, 0);
+      transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .number-button:hover {
+      border: 1px solid #02bcff;
+      opacity: 0.8;
+      box-shadow: 0 0 10px 5px rgba(2, 187, 255, 0.5);
+    }
+
+#login-button {
+    position: absolute;
+    left: 26%;
+    top: 85%;
+    background-color: #f5f5f503;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 50px;
+    border: 1px solid #02bcff;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+#login-button:hover {
+  background-color: #00ffff;
+}
+#pin-input{
+  
+  color:#02acff;
+  text-align:center;
+
+  position: relative;
+    top: 19px;
+    left: 45px;
+    height: 30px;
+    width: 197px;
+    background:black;
+  border:1px solid #02bcff;
+}
+
+
+
