@@ -16,8 +16,6 @@ numberButtons.forEach((button) => {
 const defaultPin = "1234";
 
 // Add click event listener to the login button
-loginButton.addEventListener("click", () => {
-    event.preventDefault();
 
     const enteredPin = pinInput.value.trim();
 
